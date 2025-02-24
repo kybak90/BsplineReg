@@ -38,6 +38,7 @@ add_boundary_knots = function(x, interior_knots, degree = 3, tiny = 1e-5)
   return(knots)
 }
 
+#' @export
 knots_quantile = function(x, dimension, degree = 3)
 {
   dimension = max(dimension, degree + 1)
@@ -51,6 +52,7 @@ knots_quantile = function(x, dimension, degree = 3)
   return(interior_knots)
 }
 
+#' @export
 fit_spline = function(x_values, y_values, interior_knots, degree)
 {
   knots = add_boundary_knots(x_values, interior_knots, degree)
@@ -59,6 +61,7 @@ fit_spline = function(x_values, y_values, interior_knots, degree)
   return(list(beta = beta, knots = knots, degree = degree))
 }
 
+#' @export
 predict_spline = function(model, new_x)
 {
   G_new = create_design_matrix(new_x, model$knots, model$degree)
@@ -66,6 +69,8 @@ predict_spline = function(model, new_x)
   return(y_pred)
 }
 
+#' @export
+#' @import ggplot2
 plot_spline = function(x_values, y_values, model, grid_x)
 {
   y_pred = predict_spline(model, grid_x)

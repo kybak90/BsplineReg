@@ -1,16 +1,19 @@
 Package: BsplineReg
-Type: Package
-Title: What the Package Does (Title Case)
+Title: Bspline Regression Estimation
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Kwan-Young", "Bak",
+      email = "kybak@sungshin.ac.kr",
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: Fitting a regression spline estimator based on B-spline basis.
+License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    ggplot2
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 2.10)
