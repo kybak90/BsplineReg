@@ -1,6 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# Note
+**This package is intended solely for educational purposes and covers part of the material from *R Programming With Workflow Design* (ISBN: 9791158087449).**
+
 # BsplineReg
 
 <!-- badges: start -->
